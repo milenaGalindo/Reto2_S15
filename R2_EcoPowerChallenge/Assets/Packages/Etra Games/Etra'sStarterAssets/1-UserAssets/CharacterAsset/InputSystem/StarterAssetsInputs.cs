@@ -16,6 +16,7 @@ namespace Etra.StarterAssets.Input
         public bool shoot;
         public bool crouch;
         public bool interact;
+        public bool collect;
         public bool dash;
         public bool start;
         public bool select;
@@ -33,6 +34,7 @@ namespace Etra.StarterAssets.Input
 
         [Header("Usable Item Inventory")]
         public float usableItemInventoryScroll;
+        public float usableItemScroll;
         public bool item0Select;
         public bool item1Select;
         public bool item2Select;
@@ -45,6 +47,9 @@ namespace Etra.StarterAssets.Input
         public bool item9Select;
 
 #if ENABLE_INPUT_SYSTEM
+
+
+
         public void OnMove(InputValue value)
         {
             MoveInput(value.Get<Vector2>());
@@ -88,19 +93,24 @@ namespace Etra.StarterAssets.Input
             InteractInput(value.isPressed);
         }
 
+        public void OnCollect(InputValue value)
+        {
+            CollectInput(value.isPressed);
+        }
+
         public void OnDash(InputValue value)
         {
             DashInput(value.isPressed);
         }
 
         public void OnMouseWheelInventoryScroll(InputValue value)
-        {
+        {            
             InventoryScrollInput(value.Get<float>());
         }
-
+        
         public void OnUsableItemScroll(InputValue value)
         {
-            InventoryScrollInput(value.Get<float>());
+            UsableItemScrollInput(value.Get<float>());
         }
 
         public void OnSelectItem0(InputValue value)
@@ -260,6 +270,11 @@ namespace Etra.StarterAssets.Input
             interact = newInteractState;
         }
 
+        public void CollectInput(bool newCollectState)
+        {
+            collect = newCollectState;
+        }
+
         public void DashInput(bool newDashState)
         {
             dash = newDashState;
@@ -274,10 +289,24 @@ namespace Etra.StarterAssets.Input
             else if (newScrollState < 0)
             {
                 newScrollState = -1;
-            }
-
+            }          
             usableItemInventoryScroll = newScrollState;
         }
+
+        public void UsableItemScrollInput(float newScrollState)
+        {
+            if (newScrollState > 0 && usableItemScroll < 1)
+            {
+                usableItemScroll += 1;
+            }
+
+            else if (newScrollState < 0 && usableItemScroll > -1)
+            {
+                usableItemScroll += -1;
+            }
+
+        }
+
 
         public void Item0SelectInput(bool newItem0PressedState)
         {

@@ -1,0 +1,17 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e447c5d70f7f58948881cd35acd75100, type: 3}
+  m_Name: itemFertilizante
+  m_EditorClassIdentifier: 
+  itemName: Fertilizante
+  itemIcon: {fileID: 21300000, guid: 569eb2f346322ed42bc9eded6026de22, type: 3}
+  itemPrefab: {fileID: 4578200619148227717, guid: 5262c08784c8bb14a93408d21e168c58, type: 3}

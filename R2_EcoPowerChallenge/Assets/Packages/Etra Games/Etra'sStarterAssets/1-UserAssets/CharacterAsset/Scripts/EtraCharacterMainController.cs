@@ -350,6 +350,13 @@ namespace Etra.StarterAssets
                         controllerHeightMultiplier = 0.05f;
                         lineLength = _controller.radius * 2;
                     }
+
+                    else if(hitcolliders[i] is TerrainCollider terrainCollider)
+                    {
+                        target = hitcolliders[i].transform.position;
+                        controllerHeightMultiplier = 0.05f;
+                        lineLength = _controller.radius * 2;
+                    }
                     else
                     {
                         //for all other colliders we can get the contact point of the object

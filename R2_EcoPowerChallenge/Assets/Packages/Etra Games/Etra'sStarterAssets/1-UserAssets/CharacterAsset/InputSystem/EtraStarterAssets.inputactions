@@ -87,6 +87,15 @@
                     "initialStateCheck": false
                 },
                 {
+                    "name": "Collect",
+                    "type": "PassThrough",
+                    "id": "f5dc0eaa-3a87-42c7-a067-1a71c71a0e80",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
                     "name": "UsableItemScroll",
                     "type": "Button",
                     "id": "79f1b810-90df-4ebf-a63a-f9acae48f270",
@@ -106,27 +115,27 @@
                 },
                 {
                     "name": "SelectItem0",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "3e4ea17c-dd44-417c-914d-385da7a95ecb",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
                     "name": "SelectItem1",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "75c8062a-a43d-4e67-b07e-3b6a3d9d103c",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
                     "name": "SelectItem2",
-                    "type": "Button",
+                    "type": "PassThrough",
                     "id": "01a6b302-426d-428c-8c14-411dee63f4d0",
-                    "expectedControlType": "Button",
+                    "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
@@ -728,6 +737,17 @@
                     "processors": "",
                     "groups": "Gamepad",
                     "action": "Select",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "12dd6142-2038-4041-9d26-6ae1be7f87ad",
+                    "path": "<Keyboard>/r",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "KeyboardMouse",
+                    "action": "Collect",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
